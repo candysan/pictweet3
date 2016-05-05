@@ -1,4 +1,4 @@
 class Comment < ActiveRecord::Base
-  belong_to :user
-  belong_to :tweet
+  belongs_to :tweet
+  belongs_to :user
 end

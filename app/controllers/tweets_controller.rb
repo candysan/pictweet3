@@ -31,6 +31,10 @@ before_action :move_to_index, except: :index
       @tweet = Tweet.find(params[:id])
     end
 
+    def show
+      @tweet = Tweet.find(params[:id])
+    end
+
 private
 def tweet_params
   params.permit(:image, :text)

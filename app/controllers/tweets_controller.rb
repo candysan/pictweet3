@@ -10,7 +10,7 @@ before_action :move_to_index, except: :index
   end
 
   def create
-    Tweet.create(tweet_params)
+   Tweet.create(name: tweet_params[:name], image: tweet_params[:image], text: tweet_params[:text], user_id: current_user.id)
   end
 
 private
